@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/style_register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        .dropbtn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f1f1f1;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        
+        .dropdown-content a:hover {background-color: #ddd;}
+        
+        .dropdown:hover .dropdown-content {display: block;}
+        
+        .dropdown:hover .dropbtn {background-color: #19159b;}
+        </style>
+    
+  </head>
+      
+  <body>
+      <div>
+        <img class="responsive-img" src="assets/img/logo.jpg" width="100%" alt="College Logo">  
+      </div>
+  
+      <div class="menu">
+        <h2><FONT COLOR="black">Student Counselling Services</h2>
+        <nav>
+          <li><a href=index.html>Home</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <div class="dropdown">
+            <button class="dropbtn">Assessment</button>
+            <div class="dropdown-content">
+              <a href="assessment.html">Sample Assessment</a>
+              <a href="MI.html">Multiple Intelligence</a>
+            </div>
+          </div>
+           <li><a href="login.php">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </nav>
+      </div>
+    <div class="form">
+      <form action="registration.php" method="POST" >
+      
+        <h1>Sign Up</h1>
+        
+        
+
+          <!--<label>Roll Number<span class="req">*</span></label>
+            <input type="text" required autocomplete="off" name="roll_no"/>-->
+          
+          <label>First Name<span class="req">*</span></label>
+            <input type="text" required autocomplete="off" name="fname"/>
+			
+			<label>Last Name</label>
+            <input type="text" required autocomplete="off" name="lname"/>
+			
+			<label>Gender</label>
+            <select name="sex">
+                <option value="" default>-----Gender------</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+			
+			<label>Date Of Birth<span class="req">*</span></label>
+            <input type="date" required autocomplete="off" name="dob"/>
+			
+			<!--<label>Father's Name<span class="req">*</span></label>
+            <input type="text" required autocomplete="off" name="father_name"/>
+			
+			<label>Department<span class="req">*</span></label>
+            <select name="dept_code">
+                <option value="" default>-----Department------</option>
+                <option value="cse">Computer Science and Engineering</option>
+                <option value="ece">Electronics and Commmunication Engineering</option>
+                <option value="me">Mechanical Engineering</option>
+                <option value="des">B. Design</option>
+            </select>
+			
+			<label>Hostel<span class="req">*</span></label>
+            <select name="hostel_id">
+                <option value="" default>-----Hostel------</option>
+                <option value="h1">Hall of Residence - 1</option>
+                <option value="h3">Hall of Residence - 3</option>
+                <option value="h4">Hall of Residence - 4</option>
+            </select>-->
+			
+			<label>Contact Number<span class="req">*</span></label>
+            <input type="number" required autocomplete="off" name="contact_no"/>
+			
+			<label>Email Id<span class="req">*</span></label>
+            <input type="email" required autocomplete="off" name="email"/>
+		
+			<label>Password<span class="req">*</span></label>
+            <input type="password" required autocomplete="off" name="password" id="password"/>
+            <span id='message'></span>
+            <label>Confirm Password<span class="req">*</span></label>
+            <input type="password" required autocomplete="off" name="confirm_password" id="confirm_password"/>
+            
+            <button type="submit" name="submit">Register</button>
+      </form>
+	  </div>
+      <script>
+        $('#password, #confirm_password').on('keyup', function () {
+        if ($('#password').val() == $('#confirm_password').val()) {
+            $('#message').html('').css('color', 'green');
+        } else 
+            $('#message').html('Not Matching').css('color', 'red');
+        });
+    </script>
+    </body>
+</html>
+  
+  
+</body>
+</html>
